@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image:url("../img/fundo.jpg") !important;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Lato';
+	margin: 0;
+}
+
+h1 {
+	letter-spacing: 3px;
+}
+
+.poke-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: space-between;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.pokemon {
+	background-color: #eee;
+	border-radius: 20px;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	margin: 10px;
+	padding: 20px;
+	text-align: center;
+}
+
+.btn{
+	border: 1px orange solid;
+	border-radius: 5px 5px;
+	box-shadow: black 5px 4px 10px;
+	color: black ;
+	font-size: 15px;
+	background-color: orange;
+	text-align: center;
+	margin-top: 7%;
+	transition-duration: 0.4s;
+	
+}
+
+
+
+.btn:hover{
+	background-color: red; 
+	border: 1px red;
+  color: white;
+}
+
+.pokemon .img-container {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+	position: relative; 
+	left: 40px;
+
+}
+
+
+.pokemon .img-container img {
+	margin-top: 20px;
+	max-width: 90%;
+}
+
+.pokemon .info {
+	margin-top: 10px;
+}
+
+.pokemon .number {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	font-size: 0.8em;
+	padding: 5px 10px;
+}
+
+.pokemon .name {
+	margin: 15px 0 7px;
+	letter-spacing: 1px;
+}
+
+.flip-box {
+	background-color: #E6E0D4;
+	width: 200px;
+	height: 200px;
+	perspective: 1000px;
+  }
+
+.flip-box-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+	transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+	background-color: #E6E0D4;
+	color: black;
+  }
+  
+  .flip-box-back {
+	background-color: #E6E0D4;
+	
+	color: black;
+	transform: rotateY(180deg);
+  }
+
+  

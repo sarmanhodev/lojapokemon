@@ -1,0 +1,417 @@
+<!-- Código para página de checkout da loja MonsterFight Club
+especializada em Pokémon do tipo lutador.
+Desenvolvido por Diego de Freitas Dias Sarmanho Lopes -->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>|MONSTERFIGHT CLUB| CHECKOUT</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary JavaScript plugins) -->
+<script type='text/javascript' src="js/jquery-1.11.1.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/new.css" rel='stylesheet' type='text/css' />
+<!-- Classificados - CSS Card Pokémon -->
+<link href="css/classificados.css" rel='stylesheet' type='text/css' />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
+<!-- start menu -->
+<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+<script src="js/menu_jquery.js"></script>
+<script src="js/simpleCart.min.js"> </script>
+
+
+</head>
+<body>
+<!-- Cabeçalho top -->
+<div class="top_bg">
+	<div class="container">
+		<div class="header_top">
+			<div class="top_right">
+				<ul>
+					<li><a href="#">Quem Somos Nós?</a></li>|
+					<li><a href="#">Fale Conosco</a></li>|
+					<li><a href="#">COVID-19 - Saiba nossas políticas</a></li>|
+					<li><a href="#">Nossos Parceiros</a></li>
+				</ul>
+			</div>
+			<div class="top_left">
+				<h2>
+				<div id="loginContainer">
+					<a href="#" id="loginButton"><span>Login</span></a>
+					<!-- Formulário de login -->
+					<div id="loginBox">                
+						<form id="loginForm">
+								<fieldset id="body">
+									<fieldset>
+										  <label for="email">Email </label>
+										  <input type="text" name="email" id="email">
+									</fieldset>
+									<fieldset>
+											<label for="password">Senha</label>
+											<input type="password" name="password" id="password">
+									 </fieldset>
+									<input type="submit" id="login" value="Entrar">
+									<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Lembrar</i></label>
+								</fieldset>
+							<span><a href="#">Esqueceu sua senha?</a></span>
+						</form>
+						
+					</div>
+				</div>
+				<!-- Área para cadastro de cliente e para tela de checkout -->
+				<div id="loginContainer">
+					<a id="loginButton" href="#"><span>Cadastrar</span></a>
+					<a id="loginButton" href="#"><span>Checkout</span></a>
+					
+				</div>
+			</h2>
+			
+			</div>
+				<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!-- Área com logo da loja -->
+<div class="header_bg">
+<div class="container">
+	<div class="header">
+	<div class="head-t">
+		<div class="logo">
+			<a href="#"><img src="img/logofight.png" class="img-responsive" alt=""/> </a>
+		</div>
+		<!-- start header_right -->
+		<div class="header_right">
+			<div class="rgt-bottom">
+			
+			<div class="clearfix"> </div>
+		</div>
+		<!-- Barra de pesquisa-->
+		<div class="search">
+		    <form>
+		    	<input type="text" value="" placeholder="Pesquisar...">
+				<input type="submit" value="">
+			</form>
+		</div>
+		<div class="clearfix"> </div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+		<!-- Menu principal -->
+		<ul class="megamenu skyblue">
+			<li class="active grid"><a class="color1" href="#">Home</a></li>
+			<li class="grid"><a class="color2" href="#">Categorias</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Iniciais</h4>
+								<ul>
+									<li><a href="#">Geração 1</a></li>
+									<li><a href="#">Geração 2</a></li>
+									<li><a href="#">Geração 3</a></li>
+									<li><a href="#">Geração 4</a></li>
+									<li><a href="#">Geração 5</a></li>
+									<li><a href="#">Geração 6</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Regiões</h4>
+								<ul>
+									<li><a href="#">Kanto</a></li>
+									<li><a href="#">Jotoh</a></li>
+									<li><a href="#">Hoen</a></li>
+									<li><a href="#">Sinnoh</a></li>
+									<li><a href="#">Unova</a></li>
+									<li><a href="#">Kalos</a></li>
+									<li><a href="#">Sevii Islands/Orre/Almia</a></li>
+									<li><a href="#">Ilhas Laranja</a></li>
+									<li><a href="#">Ilhas Alola</a></li>
+									<li><a href="#">Galar</a></li>
+								</ul>	
+							</div>							
+						</div>
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Shiny</h4>
+								<ul>
+									<li><a href="#">Lista de Pokémon Shiny</a></li>
+									
+								</ul>	
+							</div>							
+						</div>
+					</li>
+					
+				<li><a class="color5" href="#">Ofertas Imperdíveis</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>HOT SALE!</h4>
+								<ul>
+									<li><a href="#">Novidades</a></li>
+									<li><a href="#">50% de Desconto</a></li>
+									<li><a href="#">70% de Desconto</a></li>
+									<li><a href="#">Desconto Progressivo</a></li>
+									<li><a href="#">OUTLET</a></li>
+									
+								</ul>	
+							</div>							
+						</div>
+						
+				<li><a class="color7" href="#">Utilitários</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Bags</h4>
+								<ul>
+									<li><a href="#">Handbag</a></li>
+									<li><a href="#">Mochila de Viagem</a></li>
+									<li><a href="#">Bag para Pokedéx</a></li>
+									
+								</ul>	
+							</div>												
+						</div>
+						
+						<div class="col1">
+							<div class="h_nav">
+								<h4>acessórios</h4>
+								<ul>
+									<li><a href="#">cinto para pokebola</a></li>
+									<li><a href="#">pokeballs</a></li>
+									<li><a href="#">luvas</a></li>
+									<li><a href="#">kits promocionais</a></li>
+									<li><a href="#">relógios</a></li>
+									<li><a href="#">skins para pokedéx</a></li>
+								</ul>	
+							</div>
+						</div>
+						
+					</div>
+					
+				</li>				
+			
+				
+						
+				<li><a class="color9" href="#">Acessórios de jornada</a>
+				<div class="megapanel">
+					<div class="row">
+						<div class="col1">
+							<div class="h_nav">
+								<h4>Eletrônicos</h4>
+								<ul>
+									<li><a href="#">POKÉMON GEAR</a></li>
+									<li><a href="#">POKENAV</a></li>
+									<li><a href="#">POKENAV PLUS</a></li>
+									<li><a href="#">POKÉMON DIGITAL ASSISTANT (P★DA)</a></li>
+									<li><a href="#">POKÉMON WATCH (POKÉTCH)</a></li>
+									<li><a href="#">C-GEAR</a></li>
+									<li><a href="#">PLAYER SEARCH SYSTEM (PSS)</a></li>
+								</ul>	
+							</div>							
+						</div>
+										
+					</div>
+				 				
+				</li>
+		 </ul> 
+	</div>
+</div>
+</div>
+<div class="container">
+	<div class="check">	 
+		 <!-- Histórico de Compras -->
+			 <div class="final cart-total">
+			 <a class="continue" href="#">Carrinho de Compras</a>
+			 <div class="price-details">
+				 <!-- Detalhes da compra-->
+				 <h3>Detalhes</h3>
+				 <span><strong>Mankey</strong></span>
+				 <span class="total1">R$112.00</span><br>
+				 <span><strong>Makuhita</strong></span>
+				 <span class="total1">R$592.00</span><br>
+				 <span><strong>Lucario</strong></span>
+				 <span class="total1">R$896.00</span>
+				 
+				 <!-- Valor total somando com valor de frete -->
+				 <span><strong>Total</strong></span>
+				 <span class="total1">R$1.600.00</span>
+				 <span><strong>Descontos</strong></span>
+				 <span class="total1">---</span>
+				 <span><strong>Frete</strong></span>
+				 <span class="total1">R$150.00</span>
+				 <div class="clearfix"></div>				 
+			 </div>	
+			 <!-- Valor total a ser pago -->
+			 <ul class="total_price">
+			   <li class="last_price"> <h4><strong>TOTAL</strong></h4></li>	
+			   <li class="last_price"><span>R$1.750.00</span></li>
+			   <div class="clearfix"> </div>
+
+			 </ul>
+			
+			 <!-- Botão para finalizar compra  -->
+			 <div class="clearfix"></div>
+			 <a class="order" id="myBtn" href="#">Finalizar Compra</a>
+			 <div class="total-item">
+				 <!-- Outras opções de compra  -->
+				 <h3><strong>Aproveite e veja tambem</strong></h3>
+				 <div class="single-wid-product">
+					 <h2>Kit Ball - R$150.00</h2>
+				 <a href="#"><img src="img/kitball.jpg" alt="" class="product-thumb"><button class="btn" onclick="add()" type="submit">Add+</button></a>
+				 </div>
+				 <div class="single-wid-product">
+					<h2>Boné Treinador Pokémon - R$50.00</h2>
+				 <a href="#"><img src="img/bone.jpg" alt="" class="product-thumb"><button class="btn" onclick="add()" type="submit">Add+</button></a>
+				</div>
+				<div class="single-wid-product">
+					<h2>Pelúcia Hitmonchan - R$50.00</h2>
+				 <a href="#"><img src="img/hitmo.png" alt="" class="product-thumb"><button class="btn" onclick="add()" type="submit">Add+</button></a>
+				</div>
+				</div>
+			</div>
+			
+			<!-- div para exibiçao dos cards de pokémon com as respecitas funçoes JS -->
+			<div id="poke_container" class="poke-container"><script src="js/pokesearch.js"></script>
+				<script> function add()
+					{ alert("Ítem adicionado ao carrinho com sucesso!");
+						}</script></div>
+		</div> 
+			 
+
+		<!-- Modal Finalizar Compra -->
+		<div id="myModal" class="modal">
+
+		<!-- Modal Conteúdo -->
+		<div class="modal-content">
+		<!-- Texto apresentado dentro da modal com imagens -->
+	  	<span class="close">&times;</span>
+	  	<p style="text-align: center; font-size: large;">Compra efetuada com sucesso!<img src="img/confirma.png"></img></p><br>
+	  	<p style="text-align: center;">Obrigado por comprar com a MonsterFight Club!<img src="img/luvas.png"></img></p><br>
+	  	<p style="text-align: center;">Como brinde, você acabou de ganhar um companheiro de luta!<img src="img/hitmo.png"> </p>
+		</div>
+  
+  </div>
+		 
+  <script>
+	// Modal
+	var modal = document.getElementById("myModal");
+	
+	// Botão para abrir modal
+	var btn = document.getElementById("myBtn");
+	
+	// Tag <span> para fechar modal
+	var span = document.getElementsByClassName("close")[0];
+	
+	// Quando usuário clicar para abrir modal
+	btn.onclick = function() {
+	  modal.style.display = "block";
+	}
+	
+	// Quando usuário clicar para fehcar a modal
+	span.onclick = function() {
+	  modal.style.display = "none";
+	}
+	
+	// Fechar modal quando o usuário clicar fora
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+		modal.style.display = "none";
+	  }
+	}
+	</script>
+		
+			
+	 
+</div>
+<div class="foot-top">
+	<div class="container">
+		<div class="col-md-6 s-c">
+			<!-- Links para redes sociais -->
+			<li>
+				<div class="fooll">
+					<h5><strong>follow us on</strong></h5>
+				</div>
+			</li>
+			<li>
+				<div class="social-ic">
+					<ul>
+						<li><a href="#"><i class="facebok"> </i></a></li>
+						<li><a href="#"><i class="twiter"> </i></a></li>
+						<li><a href="#"><i class="goog"> </i></a></li>
+						<li><a href="#"><i class="be"> </i></a></li>
+						<li><a href="#"><i class="pp"> </i></a></li>
+							<div class="clearfix"></div>	
+					</ul>
+				</div>
+			</li>
+				<div class="clearfix"> </div>
+		</div>
+		<div class="col-md-6 s-c">
+			<div class="stay">
+						<div class="stay-left">
+							<!-- Inscriçao para newsletter -->
+							<form>
+								<input type="text" placeholder="Enter your email to join our newsletter" required="">
+							</form>
+						</div>
+						<div class="btn-1">
+							<form>
+								<input type="submit" value="join">
+							</form>
+						</div>
+							<div class="clearfix"> </div>
+			</div>
+		</div>
+			<div class="clearfix"> </div>
+	</div>
+</div>
+<!-- Rodapé -->
+<div class="footer">
+	<div class="container">
+		<div class="col-md-3 cust">
+			<h4><strong>Informações</strong></h4>
+				<li><a href="#">Trabalhe Conosco</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">COVID 19 - Saiba nossas políticas</a></li>
+				<li><a href="#">Entregas por todo mundo</a></li>
+		</div>
+		<div class="col-md-2 abt">
+			<h4><strong>Sobre Nós</strong></h4>
+				<li><a href="#">Nossa história</a></li>
+				
+				<li><a href="#">Fale Conosco</a></li>
+		</div>
+		<div class="col-md-2 myac">
+			<h4><strong>Minha Conta</strong></h4>
+				<li><a href="#">Registrar</a></li>
+				<li><a href="#">Meu Carrinho</a></li>
+				<li><a href="#">Histórico de Compras</a></li>
+				<li><a href="#">Pagamento</a></li>
+		</div>
+		<div class="col-md-5 our-st">
+			<div class="our-left">
+				<h4><strong>Endereço</strong></h4>
+			</div>
+			
+			<div class="clearfix"> </div>
+				<li><i class="add"yle="text-align: center;"> </i><strong>Johto Region, New Bark Town, G no.57</strong></li>
+				<li><i class="phone"> </i><strong>Phone: 025-32759666</strong></li>
+				<li><a href="#"><i class="mail"> </i><strong>E-mail para contato: info@monsterclub.com</strong> </a></li>
+			
+		</div>
+		<!-- Copyrights -->
+		<div class="clearfix"> </div>
+			<p ><strong>|Copyrights © 2020 Diego Sarmanho. All rights reserved |</strong> </a></p>
+	</div>
+</div>
+</body>
+</html>
